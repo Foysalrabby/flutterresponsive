@@ -16,6 +16,10 @@ class Jokelisteddata extends StatelessWidget{
            onTap: ()=>jokeSelectedcallback(joke),
            selected: selectedata == joke,
          ),
+         decoration: BoxDecoration(
+           shape: BoxShape.rectangle,
+           borderRadius: BorderRadius.circular(4.5)
+         ),
        );
      }).toList(),
    );
