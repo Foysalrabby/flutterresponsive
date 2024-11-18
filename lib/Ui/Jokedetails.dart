@@ -5,7 +5,7 @@ import 'package:flutterresponsive/Model/Jokemodel.dart';
 
 class Jokedetails extends StatelessWidget{
   final bool Intabletlayout;
-  final Jokemodel joke;
+   Jokemodel? joke;
   Jokedetails({required this.Intabletlayout,required this.joke});
   @override
   Widget build(BuildContext context) {
@@ -15,12 +15,12 @@ class Jokedetails extends StatelessWidget{
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(joke.setup ?? 'no joke selected',style: textTheme.headlineMedium),
+          child: Text(joke?.setup ?? 'no joke selected',style: textTheme.headlineMedium),
         ),
 
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(joke.punchline ?? 'please selected in left', style: textTheme.headlineSmall,),
+          child: Text(joke?.punchline ?? 'please selected in left', style: textTheme.headlineSmall,),
         )
       ],
     );
@@ -30,7 +30,7 @@ class Jokedetails extends StatelessWidget{
     }
    return Scaffold(
      appBar: AppBar(
-       title: Text(joke.type ??"no joke seleted"),
+       title: Text(joke?.type ??"no joke seleted"),
        backgroundColor: Colors.purpleAccent,
      ),
      body: Container(

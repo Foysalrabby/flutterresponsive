@@ -4,7 +4,7 @@ import 'package:flutterresponsive/Model/Jokemodel.dart';
 
 class Jokelisteddata extends StatelessWidget{
   final ValueChanged<Jokemodel> jokeSelectedcallback;
-  final Jokemodel selectedata;
+   Jokemodel? selectedata;
   Jokelisteddata({required this.jokeSelectedcallback,required this.selectedata });
   @override
   Widget build(BuildContext context) {
